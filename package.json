@@ -1,0 +1,31 @@
+{
+  "name": "zoom",
+  "version": "1.0.0",
+  "description": "Zoom Clone",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HannesCho/zoom.git"
+  },
+  "license": "Hannes",
+  "bugs": {
+    "url": "https://github.com/HannesCho/zoom/issues"
+  },
+  "homepage": "https://github.com/HannesCho/zoom#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/node": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
+  }
+}
