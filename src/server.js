@@ -18,10 +18,14 @@ const server = http.createServer(app); // http server
 const wss = new WebSocket.Server({ server }); // websocket server + http server
 // only create wss should be also fine
 
-function handleConnection(socket) {
-  console.log(socket);
-}
+// function handleConnection(socket) {
+//   //socket means the browser just connect
+//   console.log(socket);
+// }
 
-wss.on("connection", handleConnection);
+// this is better bcause you can see what happen after coonection.
+wss.on("connection", (socket) => {
+  socket.send("hello!!");
+});
 
 server.listen(3000, handleListen);
