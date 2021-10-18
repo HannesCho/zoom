@@ -25,7 +25,11 @@ const wss = new WebSocket.Server({ server }); // websocket server + http server
 
 // this is better bcause you can see what happen after coonection.
 wss.on("connection", (socket) => {
-  console.log(console.log("Connected to Browser ✅"));
+  console.log("Connected to Browser ✅");
+  socket.on("close", () => console.log("Disconnected from the Browser ❌"));
+  socket.on("message", (message) => {
+    console.log(message.toString("utf8"));
+  });
   socket.send("hello!!");
 });
 
